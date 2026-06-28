@@ -2,17 +2,15 @@ import * as React from "react"
 import { Container } from "@/components/layout/Container"
 import { BackgroundEffects } from "./BackgroundEffects"
 import { HeroContent } from "./HeroContent"
-import { HeroVisual } from "./HeroVisual"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] w-full flex items-center pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-[90vh] w-full flex items-center pt-24 pb-16 overflow-hidden bg-[#0a0a0a]">
       <BackgroundEffects />
       
-      <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center relative z-10">
+      <Container className="relative z-10 w-full h-full flex items-center">
+        <div className="w-full lg:w-1/2 relative z-20">
           <HeroContent />
-          <HeroVisual />
         </div>
       </Container>
     </section>

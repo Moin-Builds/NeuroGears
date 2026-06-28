@@ -5,9 +5,10 @@ import { Container } from "@/components/layout/Container"
 import { Section } from "@/components/layout/Section"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 import { ServiceCard } from "@/components/cards/ServiceCard"
-import { SERVICES_DATA, type ServiceData } from "@/data/services"
+import { SERVICES_DATA } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 
-export function RelatedServices({ currentService }: { currentService: ServiceData }) {
+export function RelatedServices({ currentService }: { currentService: DetailedServiceData }) {
   // Simply pick 3 other random or sequential services
   const related = SERVICES_DATA.filter(s => s.id !== currentService.id).slice(0, 3)
 

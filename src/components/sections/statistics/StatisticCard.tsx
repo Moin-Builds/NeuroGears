@@ -1,7 +1,4 @@
-"use client"
-
 import * as React from "react"
-import { motion } from "framer-motion"
 import { Card } from "@/components/ui/Card"
 import { Counter } from "@/components/shared/Counter"
 import { LucideIcon } from "lucide-react"
@@ -23,26 +20,18 @@ export function StatisticCard({
   suffix, 
   decimals, 
   icon: Icon, 
-  delay = 0 
 }: StatisticCardProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay }}
-      whileHover={{ y: -8 }}
-      className="group h-full"
-    >
+    <div className="group h-full">
       <Card 
         variant="glass" 
-        className="h-full flex flex-col items-center justify-center p-8 text-center transition-all duration-300 group-hover:border-primary/40 group-hover:shadow-[0_0_25px_rgba(220,38,38,0.15)]"
+        className="h-full flex flex-col items-center justify-center p-4 py-6 text-center transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1"
       >
-        <div className="p-3 bg-primary/10 rounded-full mb-5 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-          <Icon className="w-6 h-6 text-primary" />
+        <div className="p-2 bg-primary/10 rounded-full mb-3 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
+          <Icon className="w-5 h-5 text-primary" />
         </div>
         
-        <h4 className="text-4xl font-bold text-white mb-2 tracking-tight">
+        <h4 className="text-2xl lg:text-3xl font-bold text-foreground mb-1 tracking-tight">
           <Counter 
             value={value} 
             prefix={prefix} 
@@ -52,10 +41,10 @@ export function StatisticCard({
           />
         </h4>
         
-        <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+        <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
           {title}
         </p>
       </Card>
-    </motion.div>
+    </div>
   )
 }

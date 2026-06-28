@@ -4,9 +4,9 @@ import * as React from "react"
 import { Container } from "@/components/layout/Container"
 import { Section } from "@/components/layout/Section"
 import { SectionHeading } from "@/components/shared/SectionHeading"
-import type { ServiceData } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 
-export function ServiceProcess({ service }: { service: ServiceData }) {
+export function ServiceProcess({ service }: { service: DetailedServiceData }) {
   if (!service.process || service.process.length === 0) return null
 
   return (

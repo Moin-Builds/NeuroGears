@@ -6,9 +6,9 @@ import { Section } from "@/components/layout/Section"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 import { Card } from "@/components/ui/Card"
 import { Star, User } from "lucide-react"
-import type { ServiceData } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 
-export function ServiceReviews({ service }: { service: ServiceData }) {
+export function ServiceReviews({ service }: { service: DetailedServiceData }) {
   if (!service.reviews || service.reviews.length === 0) return null
 
   return (

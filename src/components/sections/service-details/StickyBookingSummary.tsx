@@ -5,9 +5,9 @@ import Link from "next/link"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { buttonVariants } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
-import type { ServiceData } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 
-export function StickyBookingSummary({ service }: { service: ServiceData }) {
+export function StickyBookingSummary({ service }: { service: DetailedServiceData }) {
   // Simple scroll spy to show the sticky bar after scrolling past the hero
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [0, 400, 500], [0, 0, 1])

@@ -5,9 +5,9 @@ import { Container } from "@/components/layout/Container"
 import { Section } from "@/components/layout/Section"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 import { CheckCircle2 } from "lucide-react"
-import type { ServiceData } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 
-export function ServiceOverview({ service }: { service: ServiceData }) {
+export function ServiceOverview({ service }: { service: DetailedServiceData }) {
   if (!service.benefits || service.benefits.length === 0) return null
 
   return (

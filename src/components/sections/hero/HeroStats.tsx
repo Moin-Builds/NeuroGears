@@ -14,13 +14,13 @@ export function HeroStats() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.4 }}
-      className="flex items-center gap-8 pt-6 border-t border-white/10 w-full"
+      transition={{ duration: 0.3, delay: 0.1 }}
+      className="flex items-center gap-8 pt-6 border-t border-border w-full"
     >
       {STATS.map((stat, index) => (
         <div key={index} className="flex flex-col">
           <span className="text-2xl font-bold text-white">{stat.value}</span>
-          <span className="text-sm text-muted-foreground">{stat.label}</span>
+          <span className="text-sm text-zinc-400">{stat.label}</span>
         </div>
       ))}
     </motion.div>

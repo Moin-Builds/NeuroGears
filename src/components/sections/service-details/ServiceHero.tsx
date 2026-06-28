@@ -8,10 +8,10 @@ import { buttonVariants } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
 import { Star, Clock } from "lucide-react"
-import type { ServiceData } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 import { IconMap } from "@/data/services"
 
-export function ServiceHero({ service }: { service: ServiceData }) {
+export function ServiceHero({ service }: { service: DetailedServiceData }) {
   const Icon = IconMap[service.icon]
 
   return (
@@ -30,7 +30,7 @@ export function ServiceHero({ service }: { service: ServiceData }) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.3 }}
           className="max-w-3xl"
         >
           <div className="flex items-center gap-4 mb-6">

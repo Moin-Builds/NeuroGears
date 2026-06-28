@@ -3,35 +3,37 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.12 0 0); /* very dark, almost black */
-  --foreground: oklch(0.98 0 0);
+  --background: #F8FAFC; /* Slate 50 */
+  --foreground: #0F172A; /* Slate 900 */
   
-  --card: oklch(0.15 0 0);
-  --card-foreground: oklch(0.98 0 0);
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
   
-  --popover: oklch(0.15 0 0);
-  --popover-foreground: oklch(0.98 0 0);
+  --popover: #FFFFFF;
+  --popover-foreground: #0F172A;
   
-  --primary: oklch(0.55 0.22 25); /* Red Accent */
-  --primary-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.55 0.22 25); /* Premium Red */
+  --primary-foreground: #FFFFFF;
   
-  --secondary: oklch(0.25 0 0);
-  --secondary-foreground: oklch(0.98 0 0);
+  --secondary: #F1F5F9; /* Slate 100 */
+  --secondary-foreground: #0F172A;
   
-  --muted: oklch(0.20 0 0);
-  --muted-foreground: oklch(0.65 0 0);
+  --muted: #E2E8F0; /* Slate 200 */
+  --muted-foreground: #475569; /* Slate 600 */
   
-  --accent: oklch(0.25 0 0);
-  --accent-foreground: oklch(0.98 0 0);
+  --accent: #F1F5F9;
+  --accent-foreground: #0F172A;
+  
+  --ai-primary: #3b82f6; /* Blue for AI sections */
   
   --destructive: oklch(0.40 0.15 25);
-  --destructive-foreground: oklch(0.98 0 0);
+  --destructive-foreground: #FFFFFF;
   
-  --border: oklch(0.20 0 0);
-  --input: oklch(0.20 0 0);
-  --ring: oklch(0.55 0.22 25); /* Primary red ring */
+  --border: #CBD5E1; /* Slate 300 */
+  --input: #E2E8F0;
+  --ring: #3b82f6;
   
-  --radius: 0.75rem;
+  --radius: 1rem;
 }
 
 @theme inline {
@@ -62,6 +64,8 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+
+  --color-ai-primary: var(--ai-primary);
   
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -73,15 +77,17 @@
 
 /* Glassmorphism utility classes */
 @utility glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
 }
 
 @utility glass-dark {
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
 }
 
 @layer base {

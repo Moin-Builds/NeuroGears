@@ -6,9 +6,9 @@ import { Container } from "@/components/layout/Container"
 import { Section } from "@/components/layout/Section"
 import { SectionHeading } from "@/components/shared/SectionHeading"
 import { ChevronDown } from "lucide-react"
-import type { ServiceData } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 
-export function ServiceFAQ({ service }: { service: ServiceData }) {
+export function ServiceFAQ({ service }: { service: DetailedServiceData }) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(0) // Open the first one by default
 
   if (!service.faq || service.faq.length === 0) return null

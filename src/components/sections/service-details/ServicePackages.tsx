@@ -9,9 +9,9 @@ import { Card } from "@/components/ui/Card"
 import { buttonVariants } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 import { CheckCircle2, Clock, CarFront, ShieldCheck } from "lucide-react"
-import type { ServiceData } from "@/data/services"
+import type { DetailedServiceData } from "@/data/services/types"
 
-export function ServicePackages({ service }: { service: ServiceData }) {
+export function ServicePackages({ service }: { service: DetailedServiceData }) {
   if (!service.packages || service.packages.length === 0) return null
 
   return (
