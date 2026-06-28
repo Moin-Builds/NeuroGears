@@ -6,7 +6,8 @@ import { buttonVariants } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/Badge"
 import { Clock, Star, ArrowRight } from "lucide-react"
-import { IconMap, type ServiceData } from "@/data/services"
+import type { ServiceData } from "@/data/services"
+import { IconMap } from "@/data/services"
 
 interface ServiceCardProps {
   service: ServiceData
@@ -18,15 +19,15 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
 
   return (
     <div className="group h-full flex">
-      <Card 
-        variant="glass" 
-        className="flex flex-col h-full overflow-hidden transition-all duration-300 group-hover:-translate-y-1.5 bg-[lab(6_0_-1.12)] border-border hover:border-primary/50 shadow-sm hover:shadow-primary/10"
+      <Card
+        variant="glass"
+        className="flex flex-col h-full overflow-hidden transition-all duration-300 group-hover:-translate-y-1.5 bg-[lab(6_0_-1.12)] border-primary/30 hover:border-primary/50 shadow-[0_0_20px_oklch(0.55_0.22_25/0.15)]"
       >
         {/* Image Container */}
         <div className="relative h-48 w-full overflow-hidden bg-muted">
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-[lab(6_0_-1.12)]/90 to-transparent" />
-          <Image 
-            src={service.imageUrl} 
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/90 to-transparent" />
+          <Image
+            src={service.imageUrl}
             alt={service.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -34,8 +35,8 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute top-4 left-4 z-20">
-            <Badge className="shadow-sm border-none flex items-center gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90">
-              <Star className="w-3.5 h-3.5 fill-current" />
+            <Badge className="shadow-sm border-none flex items-center gap-1.5 bg-primary text-primary-foreground">
+              <Star className="w-3.5 h-3.5 fill-primary-foreground" />
               {service.rating}
             </Badge>
           </div>
@@ -68,14 +69,14 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
           </div>
 
           <div className="flex items-center gap-3 mt-auto">
-            <Link 
-              href={service.slug === 'ai-diagnosis' ? `/services/${service.slug}` : `/booking?service=${service.slug}`} 
-              className={cn(buttonVariants({ variant: "default" }), "flex-1 shadow-md hover:shadow-lg transition-shadow")}
+            <Link
+              href={`/booking?service=${service.slug}`}
+              className={cn(buttonVariants({ variant: "default" }), "flex-1 shadow-md hover:shadow-lg transition-shadow bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary/20 hover:shadow-primary/40 border-none")}
             >
-              {service.slug === 'ai-diagnosis' ? 'AI Diagnosis' : 'Book Now'}
+              Book Now
             </Link>
-            <Link 
-              href={`/services/${service.slug}`} 
+            <Link
+              href={`/services/${service.slug}`}
               aria-label={`Learn more about ${service.title}`}
               className={cn(buttonVariants({ variant: "outline" }), "px-4 bg-transparent border-primary/30 text-primary hover:bg-primary/10 hover:text-primary")}
             >
