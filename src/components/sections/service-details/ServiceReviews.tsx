@@ -12,7 +12,7 @@ export function ServiceReviews({ service }: { service: DetailedServiceData }) {
   if (!service.reviews || service.reviews.length === 0) return null
 
   return (
-    <Section spacing="lg" className="border-t border-white/5 bg-black/30">
+    <Section spacing="lg" className="border-t border-white/5 bg-background/30">
       <Container>
         <SectionHeading 
           badge="Real Feedback"

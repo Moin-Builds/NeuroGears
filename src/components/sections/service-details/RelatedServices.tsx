@@ -15,7 +15,7 @@ export function RelatedServices({ currentService }: { currentService: DetailedSe
   if (related.length === 0) return null
 
   return (
-    <Section spacing="lg" className="border-t border-white/5 bg-black/40">
+    <Section spacing="lg" className="border-t border-white/5 bg-background/40">
       <Container>
         <SectionHeading 
           title="Related Services"

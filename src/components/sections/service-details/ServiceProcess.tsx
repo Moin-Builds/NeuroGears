@@ -10,7 +10,7 @@ export function ServiceProcess({ service }: { service: DetailedServiceData }) {
   if (!service.process || service.process.length === 0) return null
 
   return (
-    <Section spacing="lg" className="border-t border-white/5 bg-black/20">
+    <Section spacing="lg" className="border-t border-white/5 bg-background/20">
       <Container>
         <SectionHeading 
           badge="How It Works"
@@ -36,7 +36,7 @@ export function ServiceProcess({ service }: { service: DetailedServiceData }) {
                   </div>
 
                   {/* Center Number Marker */}
-                  <div className={`absolute left-0 md:left-1/2 w-14 h-14 rounded-full bg-black border-2 border-primary shadow-[0_0_20px_rgba(220,38,38,0.3)] flex items-center justify-center z-10 md:-translate-x-1/2`}>
+                  <div className={`absolute left-0 md:left-1/2 w-14 h-14 rounded-full bg-background border-2 border-primary shadow-[0_0_20px_rgba(220,38,38,0.3)] flex items-center justify-center z-10 md:-translate-x-1/2`}>
                     <span className="text-lg font-bold text-white">{step.step}</span>
                   </div>
 

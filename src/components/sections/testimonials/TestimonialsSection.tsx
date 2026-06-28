@@ -32,7 +32,7 @@ const TESTIMONIALS = [
 
 export function TestimonialsSection() {
   return (
-    <Section spacing="md" id="testimonials" className="relative border-t border-border bg-muted">
+    <Section spacing="md" id="testimonials" className="relative border-t border-border bg-background pb-8 md:pb-12">
       <Container>
         <SectionHeading 
           badge="Customer Stories"
@@ -44,7 +44,7 @@ export function TestimonialsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mt-12">
           {TESTIMONIALS.map((testimonial, index) => (
             <div key={index} className="group h-full">
-              <Card variant="glass" className="h-full flex flex-col p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)]">
+              <Card variant="glass" className="h-full flex flex-col p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)] bg-[lab(6_0_-1.12)] border-b-[rgb(39,39,42)]">
                 <div className="flex items-center gap-1 mb-4 text-primary">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-primary" />

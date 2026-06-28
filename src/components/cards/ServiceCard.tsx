@@ -20,11 +20,11 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
     <div className="group h-full flex">
       <Card 
         variant="glass" 
-        className="flex flex-col h-full overflow-hidden transition-all duration-300 group-hover:-translate-y-1.5 bg-slate-900 border-blue-500/30 hover:border-blue-500/50 shadow-[0_0_20px_rgba(59,130,246,0.15)]"
+        className="flex flex-col h-full overflow-hidden transition-all duration-300 group-hover:-translate-y-1.5 bg-[lab(6_0_-1.12)] border-border hover:border-primary/50 shadow-sm hover:shadow-primary/10"
       >
         {/* Image Container */}
         <div className="relative h-48 w-full overflow-hidden bg-muted">
-          <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/90 to-transparent" />
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-[lab(6_0_-1.12)]/90 to-transparent" />
           <Image 
             src={service.imageUrl} 
             alt={service.title}
@@ -34,21 +34,21 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <div className="absolute top-4 left-4 z-20">
-            <Badge className="shadow-sm border-none flex items-center gap-1.5 bg-blue-600 text-white">
-              <Star className="w-3.5 h-3.5 fill-white" />
+            <Badge className="shadow-sm border-none flex items-center gap-1.5 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Star className="w-3.5 h-3.5 fill-current" />
               {service.rating}
             </Badge>
           </div>
           <div className="absolute bottom-4 left-4 z-20 flex items-center gap-2">
-            <div className="p-2 backdrop-blur-md rounded-md border bg-blue-500/20 border-blue-500/30">
-              {Icon && <Icon className="w-5 h-5 shadow-sm text-blue-400" />}
+            <div className="p-2 backdrop-blur-md rounded-md border bg-primary/20 border-primary/30">
+              {Icon && <Icon className="w-5 h-5 shadow-sm text-primary" />}
             </div>
             <h3 className="text-xl font-bold drop-shadow-sm text-white">{service.title}</h3>
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-6 flex flex-col flex-1 bg-slate-900">
+        <div className="p-6 flex flex-col flex-1 bg-[lab(6_0_-1.12)]">
           <p className="text-sm line-clamp-2 mb-4 flex-1 text-slate-300">
             {service.shortDescription}
           </p>
@@ -69,17 +69,17 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
 
           <div className="flex items-center gap-3 mt-auto">
             <Link 
-              href={`/booking?service=${service.slug}`} 
-              className={cn(buttonVariants({ variant: "default" }), "flex-1 shadow-md hover:shadow-lg transition-shadow bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-blue-900/50 hover:shadow-blue-900/70 border-none")}
+              href={service.slug === 'ai-diagnosis' ? `/services/${service.slug}` : `/booking?service=${service.slug}`} 
+              className={cn(buttonVariants({ variant: "default" }), "flex-1 shadow-md hover:shadow-lg transition-shadow")}
             >
-              Book Now
+              {service.slug === 'ai-diagnosis' ? 'AI Diagnosis' : 'Book Now'}
             </Link>
             <Link 
               href={`/services/${service.slug}`} 
               aria-label={`Learn more about ${service.title}`}
-              className={cn(buttonVariants({ variant: "outline" }), "px-4 bg-transparent border-blue-500/30 text-blue-400 hover:bg-blue-500/10 hover:text-blue-300")}
+              className={cn(buttonVariants({ variant: "outline" }), "px-4 bg-transparent border-primary/30 text-primary hover:bg-primary/10 hover:text-primary")}
             >
-              <ArrowRight className="w-4 h-4 text-blue-400" />
+              <ArrowRight className="w-4 h-4 text-primary" />
             </Link>
           </div>
         </div>

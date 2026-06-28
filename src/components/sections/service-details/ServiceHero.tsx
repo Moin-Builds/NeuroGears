@@ -40,12 +40,22 @@ export function ServiceHero({ service }: { service: DetailedServiceData }) {
             <Badge className="bg-white/10 text-white hover:bg-white/20 border-none backdrop-blur-md text-sm py-1.5 px-3">
               Premium Service
             </Badge>
-            <Link 
-              href={`/booking?service=${service.slug}`}
-              className={cn(buttonVariants({ size: "lg", variant: "default" }), "shadow-[0_0_20px_rgba(220,38,38,0.4)]")}
-            >
-              Book Now
-            </Link>
+            {service.slug !== 'ai-diagnosis' ? (
+              <Link 
+                href={`/booking?service=${service.slug}`}
+                className={cn(buttonVariants({ size: "lg", variant: "default" }), "shadow-[0_0_20px_rgba(220,38,38,0.4)]")}
+              >
+                Book Now
+              </Link>
+            ) : null}
+            {service.slug === 'ai-diagnosis' ? (
+              <Link 
+                href="/chatbot"
+                className={cn(buttonVariants({ size: "lg", variant: "destructive" }), "shadow-[0_0_20px_rgba(220,38,38,0.4)]")}
+              >
+                Emergency AI ChatBot
+              </Link>
+            ) : null}
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white mb-6">

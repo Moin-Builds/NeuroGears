@@ -33,7 +33,7 @@ const STATISTICS = [
 
 export function StatisticsSection() {
   return (
-    <Section spacing="sm" className="relative border-t border-border bg-accent">
+    <Section spacing="sm" className="relative bg-background pt-8 md:pt-12">
       <Container>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {STATISTICS.map((stat, index) => (

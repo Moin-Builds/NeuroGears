@@ -11,10 +11,10 @@ interface StepProps {
 }
 
 const ADDONS = [
-  { id: "a1", name: "Premium Interior Detailing", price: "$49.99", description: "Deep cleaning of carpets, seats, and dashboard." },
-  { id: "a2", name: "Engine Bay Wash", price: "$29.99", description: "Safe degreasing and cleaning of the engine compartment." },
-  { id: "a3", name: "AC Sanitization", price: "$19.99", description: "Eliminate odors and bacteria from your AC vents." },
-  { id: "a4", name: "Pick-up & Drop-off Service", price: "$15.00", description: "We will fetch your vehicle and return it once done." },
+  { id: "a1", name: "Premium Interior Detailing", price: "Rs. 5,000", description: "Deep cleaning of carpets, seats, and dashboard." },
+  { id: "a2", name: "Engine Bay Wash", price: "Rs. 3,000", description: "Safe degreasing and cleaning of the engine compartment." },
+  { id: "a3", name: "AC Sanitization", price: "Rs. 2,000", description: "Eliminate odors and bacteria from your AC vents." },
+  { id: "a4", name: "Pick-up & Drop-off Service", price: "Rs. 1,500", description: "We will fetch your vehicle and return it once done." },
 ]
 
 export function Step6Addons({ data, updateData }: StepProps) {

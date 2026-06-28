@@ -25,7 +25,7 @@ export function StatisticCard({
     <div className="group h-full">
       <Card 
         variant="glass" 
-        className="h-full flex flex-col items-center justify-center p-4 py-6 text-center transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1"
+        className="h-full flex flex-col items-center justify-center p-4 py-6 text-center transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 bg-[lab(6_0_-1.12)] border-b-[rgb(39,39,42)]"
       >
         <div className="p-2 bg-primary/10 rounded-full mb-3 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
           <Icon className="w-5 h-5 text-primary" />

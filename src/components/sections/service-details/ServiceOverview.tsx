@@ -37,7 +37,7 @@ export function ServiceOverview({ service }: { service: DetailedServiceData }) {
           {/* Right Column: Visual or Stats */}
           <div className="relative">
             <div className="absolute inset-0 bg-primary/10 blur-[80px] rounded-full" />
-            <div className="relative border border-white/10 rounded-2xl overflow-hidden bg-black/50 backdrop-blur-md p-8 md:p-12 shadow-[0_0_40px_rgba(220,38,38,0.1)]">
+            <div className="relative border border-white/10 rounded-2xl overflow-hidden bg-background/50 backdrop-blur-md p-8 md:p-12 shadow-[0_0_40px_rgba(220,38,38,0.1)]">
               <h3 className="text-2xl font-bold text-white mb-6">Service Guarantee</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Every {service.title.toLowerCase()} service is backed by our nationwide satisfaction guarantee. We don't just fix vehicles; we optimize them for peak performance and longevity.

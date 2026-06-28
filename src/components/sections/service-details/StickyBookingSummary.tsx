@@ -19,7 +19,7 @@ export function StickyBookingSummary({ service }: { service: DetailedServiceData
       className="fixed bottom-0 left-0 right-0 z-50 p-4 pointer-events-none"
     >
       <div className="max-w-4xl mx-auto pointer-events-auto">
-        <div className="bg-black/80 backdrop-blur-xl border border-white/10 p-4 md:px-6 rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-background/80 backdrop-blur-xl border border-white/10 p-4 md:px-6 rounded-2xl shadow-[0_-10px_40px_rgba(0,0,0,0.5)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col text-center sm:text-left">
             <span className="text-sm text-muted-foreground uppercase tracking-wider mb-0.5">Starting at</span>
             <span className="text-2xl font-bold text-white">{service.startingPrice}</span>

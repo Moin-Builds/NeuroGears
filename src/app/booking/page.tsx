@@ -5,7 +5,7 @@ import { Container } from "@/components/layout/Container"
 
 export default function BookingPage() {
   return (
-    <div className="min-h-screen pt-24 pb-16 bg-black">
+    <div className="min-h-screen pt-24 pb-16 bg-background">
       <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-primary/10 to-transparent pointer-events-none" />
       
       <Container>

@@ -56,7 +56,7 @@ export function ServiceInteractiveBuilder({ service }: { service: DetailedServic
   }
 
   return (
-    <Section className="bg-black/40">
+    <Section className="bg-background/40">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
           
@@ -207,7 +207,7 @@ export function ServiceInteractiveBuilder({ service }: { service: DetailedServic
 
           {/* Sticky Calculator Sidebar */}
           <div className="lg:col-span-1 relative">
-            <div className="sticky top-24 bg-black/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
+            <div className="sticky top-24 bg-background/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.5)]">
               <h3 className="text-xl font-bold text-white mb-6">Live Price Calculator</h3>
               
               <div className="space-y-4 mb-6">

@@ -3,34 +3,34 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #F8FAFC; /* Slate 50 */
-  --foreground: #0F172A; /* Slate 900 */
+  --background: #09090b; /* zinc-950 */
+  --foreground: #fafafa;
   
-  --card: #FFFFFF;
-  --card-foreground: #0F172A;
+  --card: #09090b;
+  --card-foreground: #fafafa;
   
-  --popover: #FFFFFF;
-  --popover-foreground: #0F172A;
+  --popover: #09090b;
+  --popover-foreground: #fafafa;
   
   --primary: oklch(0.55 0.22 25); /* Premium Red */
-  --primary-foreground: #FFFFFF;
+  --primary-foreground: #fafafa;
   
-  --secondary: #F1F5F9; /* Slate 100 */
-  --secondary-foreground: #0F172A;
+  --secondary: #27272a; /* zinc-800 */
+  --secondary-foreground: #fafafa;
   
-  --muted: #E2E8F0; /* Slate 200 */
-  --muted-foreground: #475569; /* Slate 600 */
+  --muted: #27272a; /* zinc-800 */
+  --muted-foreground: #a1a1aa; /* zinc-400 */
   
-  --accent: #F1F5F9;
-  --accent-foreground: #0F172A;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
   
   --ai-primary: #3b82f6; /* Blue for AI sections */
   
   --destructive: oklch(0.40 0.15 25);
-  --destructive-foreground: #FFFFFF;
+  --destructive-foreground: #fafafa;
   
-  --border: #CBD5E1; /* Slate 300 */
-  --input: #E2E8F0;
+  --border: #27272a; /* zinc-800 */
+  --input: #27272a;
   --ring: #3b82f6;
   
   --radius: 1rem;

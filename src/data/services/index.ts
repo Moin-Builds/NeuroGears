@@ -88,7 +88,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Basic Service", price: "Rs. 2,000", features: ["Oil Change", "Chain Lube", "Wash"], estimatedTime: "1 Hour", pickupDrop: false, warranty: "15 Days" },
+      { name: "Standard Tune-up", price: "Rs. 4,500", features: ["Basic + Filter Change", "Carburetor Cleaning", "Brake Adjustment"], estimatedTime: "2 Hours", pickupDrop: true, warranty: "1 Month" },
+      { name: "Premium Overhaul", price: "Rs. 8,000", features: ["Standard + Engine Flush", "Electrical Check", "Performance Tuning"], estimatedTime: "4 Hours", pickupDrop: true, warranty: "3 Months" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -107,7 +111,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Express Wash", price: "Rs. 1,500", features: ["Exterior Foam Wash", "Tire Dressing", "Glass Cleaning"], estimatedTime: "45 Mins", pickupDrop: false, warranty: "None" },
+      { name: "Deep Polish", price: "Rs. 4,000", features: ["Express + Waxing", "Interior Vacuum", "Dashboard Polish"], estimatedTime: "2 Hours", pickupDrop: true, warranty: "None" },
+      { name: "Ceramic Coating", price: "Rs. 15,000", features: ["Deep Polish + Paint Correction", "3-Layer Ceramic Coating", "Engine Bay Wash"], estimatedTime: "1 Day", pickupDrop: true, warranty: "1 Year" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -126,7 +134,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Standard Sedan", price: "Rs. 15,000/day", features: ["Civic/Corolla", "Basic Insurance", "100km Limit"], estimatedTime: "1 Day", pickupDrop: false, warranty: "None" },
+      { name: "Luxury SUV", price: "Rs. 30,000/day", features: ["Fortuner/Prado", "Comprehensive Insurance", "200km Limit"], estimatedTime: "1 Day", pickupDrop: true, warranty: "None" },
+      { name: "Sports Car", price: "Rs. 50,000/day", features: ["Porsche/Mustang", "Full Insurance", "Unlimited Mileage"], estimatedTime: "1 Day", pickupDrop: true, warranty: "None" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -145,7 +157,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Standard Parts", price: "Varies", features: ["High-Quality Aftermarket", "Basic Warranty", "Installation Available"], estimatedTime: "Instant", pickupDrop: false, warranty: "3 Months" },
+      { name: "OEM Certified", price: "Varies", features: ["100% Genuine OEM", "Manufacturer Warranty", "Guaranteed Fit"], estimatedTime: "Instant", pickupDrop: true, warranty: "1 Year" },
+      { name: "Performance Upgrades", price: "Varies", features: ["Racing Specs", "Custom Tuning", "Dyno Tested"], estimatedTime: "1-3 Days", pickupDrop: true, warranty: "6 Months" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -164,7 +180,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Standard Battery", price: "Rs. 4,500", features: ["Lead Acid", "Terminal Cleaning", "Installation"], estimatedTime: "30 Mins", pickupDrop: false, warranty: "6 Months" },
+      { name: "Heavy Duty", price: "Rs. 8,000", features: ["High CCA", "Alternator Test", "Recycling Old Battery"], estimatedTime: "45 Mins", pickupDrop: true, warranty: "1 Year" },
+      { name: "Maintenance-Free", price: "Rs. 12,000", features: ["AGM Technology", "Full Electrical Scan", "Premium Terminals"], estimatedTime: "1 Hour", pickupDrop: true, warranty: "2 Years" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -186,44 +206,7 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     packages: [],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
-  {
-    id: "s8",
-    slug: "oil-change",
-    title: "Oil Change & Engine",
-    shortDescription: "Synthetic oil changes and complete engine maintenance.",
-    longDescription: "Keep your engine running at peak efficiency with our premium synthetic oil changes and thorough engine filter replacements.",
-    icon: "Filter",
-    imageUrl: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80",
-    startingPrice: "Rs. 3,500",
-    estimatedDuration: "45 Mins",
-    rating: 4.9,
-    reviewsCount: 2200,
-    benefits: ["Fully Synthetic Oil", "Oil Filter Change", "Fluid Top-ups", "Engine Flush"],
-    process: defaultProcess,
-    faq: defaultFAQ,
-    reviews: defaultReviews,
-    packages: [],
-    categories: [], addons: [], bookingTypes: defaultBookingTypes
-  },
-  {
-    id: "s9",
-    slug: "ac-repair",
-    title: "AC Repair & Cooling",
-    shortDescription: "Comprehensive AC diagnostics, gas refill, and cooling system repair.",
-    longDescription: "Beat the heat with our expert AC servicing. We detect leaks, replace compressors, and refill refrigerant gas for optimal cabin cooling.",
-    icon: "Wind",
-    imageUrl: "https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&q=80",
-    startingPrice: "Rs. 2,500",
-    estimatedDuration: "2 Hours",
-    rating: 4.6,
-    reviewsCount: 950,
-    benefits: ["Leak Detection", "Freon Top-up", "Compressor Check", "Cabin Filter Change"],
-    process: defaultProcess,
-    faq: defaultFAQ,
-    reviews: defaultReviews,
-    packages: [],
-    categories: [], addons: [], bookingTypes: defaultBookingTypes
-  },
+
   {
     id: "s10",
     slug: "brake-inspection",
@@ -240,7 +223,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Inspection", price: "Rs. 2,000", features: ["Visual Check", "Fluid Test", "Adjustment"], estimatedTime: "30 Mins", pickupDrop: false, warranty: "15 Days" },
+      { name: "Pad Replacement", price: "Rs. 6,000", features: ["Ceramic Pads", "Rotor Skimming", "Bleeding"], estimatedTime: "2 Hours", pickupDrop: true, warranty: "6 Months" },
+      { name: "Full Overhaul", price: "Rs. 18,000", features: ["New Calipers", "Performance Rotors", "High-Temp Fluid"], estimatedTime: "4 Hours", pickupDrop: true, warranty: "1 Year" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -259,7 +246,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Inspection", price: "Rs. 5,000", features: ["Suspension Check", "Steering Test", "Lubrication"], estimatedTime: "1 Hour", pickupDrop: false, warranty: "1 Month" },
+      { name: "Shock Replacement", price: "Rs. 15,000", features: ["New OEM Shocks", "Mounts Replacement", "Alignment"], estimatedTime: "4 Hours", pickupDrop: true, warranty: "6 Months" },
+      { name: "Full Overhaul", price: "Rs. 35,000", features: ["All Bushings", "Control Arms", "Complete Rebuild"], estimatedTime: "2 Days", pickupDrop: true, warranty: "1 Year" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -269,7 +260,7 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     shortDescription: "Paintless dent removal and premium color-matched painting.",
     longDescription: "Erase scratches and dents with our advanced paint booth technology, offering 100% color matching and factory finish.",
     icon: "Paintbrush",
-    imageUrl: "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&q=80",
+    imageUrl: "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&q=80",
     startingPrice: "Rs. 3,500/panel",
     estimatedDuration: "2-3 Days",
     rating: 4.8,
@@ -278,7 +269,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Single Panel", price: "Rs. 3,500", features: ["Dent Removal", "Color Match Paint", "Clear Coat"], estimatedTime: "1 Day", pickupDrop: false, warranty: "6 Months" },
+      { name: "Full Bumper", price: "Rs. 8,000", features: ["Bumper Repair", "Oven Baked Paint", "Polishing"], estimatedTime: "2 Days", pickupDrop: true, warranty: "1 Year" },
+      { name: "Complete Car", price: "Rs. 60,000", features: ["Full Body Prep", "Premium Paint", "Ceramic Top Coat"], estimatedTime: "7 Days", pickupDrop: true, warranty: "3 Years" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -297,7 +292,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Basic Check", price: "Rs. 2,000", features: ["Visual Inspection", "Fluid Levels", "Tire Check"], estimatedTime: "30 Mins", pickupDrop: false, warranty: "None" },
+      { name: "Pre-Purchase", price: "Rs. 5,000", features: ["Test Drive", "OBD Scan", "Paint Thickness"], estimatedTime: "1 Hour", pickupDrop: false, warranty: "None" },
+      { name: "150-Point Check", price: "Rs. 8,000", features: ["Complete Teardown", "Compression Test", "Detailed PDF Report"], estimatedTime: "3 Hours", pickupDrop: true, warranty: "None" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   },
   {
@@ -316,26 +315,11 @@ export const ALL_DETAILED_SERVICES: DetailedServiceData[] = [
     process: defaultProcess,
     faq: defaultFAQ,
     reviews: defaultReviews,
-    packages: [],
-    categories: [], addons: [], bookingTypes: defaultBookingTypes
-  },
-  {
-    id: "s15",
-    slug: "ai-workshop-assistant",
-    title: "AI Workshop Assistant",
-    shortDescription: "An intelligent chatbot that helps users identify problems, estimate repair costs, recommend services, and answer vehicle-related questions in real time.",
-    longDescription: "Our AI Workshop Assistant is your 24/7 digital mechanic. Ask questions about strange noises, warning lights, or maintenance schedules and get instant, accurate advice.",
-    icon: "MessageSquare",
-    imageUrl: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&q=80",
-    startingPrice: "Free",
-    estimatedDuration: "Instant",
-    rating: 5.0,
-    reviewsCount: 12500,
-    benefits: ["24/7 Availability", "Natural Language Chat", "Smart Routing", "Instant Quotations"],
-    process: defaultProcess,
-    faq: defaultFAQ,
-    reviews: defaultReviews,
-    packages: [],
+    packages: [
+      { name: "Basic Scan", price: "Free", features: ["Image Analysis", "Quick Estimate", "General Advice"], estimatedTime: "Instant", pickupDrop: false, warranty: "None" },
+      { name: "Detailed Report", price: "Rs. 1,000", features: ["OBD Data Sync", "Part Numbers", "Labor Costs"], estimatedTime: "Instant", pickupDrop: false, warranty: "None" },
+      { name: "Expert Consult", price: "Rs. 2,500", features: ["Detailed Report +", "Video Call with Mechanic", "Priority Booking"], estimatedTime: "15 Mins", pickupDrop: false, warranty: "None" }
+    ],
     categories: [], addons: [], bookingTypes: defaultBookingTypes
   }
 ];

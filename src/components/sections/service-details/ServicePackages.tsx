@@ -15,7 +15,7 @@ export function ServicePackages({ service }: { service: DetailedServiceData }) {
   if (!service.packages || service.packages.length === 0) return null
 
   return (
-    <Section spacing="lg" className="bg-black/40">
+    <Section spacing="lg" className="bg-background/40">
       <Container>
         <SectionHeading 
           badge="Pricing Options"

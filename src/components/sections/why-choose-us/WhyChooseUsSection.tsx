@@ -30,9 +30,9 @@ const REASONS = [
 
 export function WhyChooseUsSection() {
   return (
-    <Section spacing="md" id="why-choose-us" className="relative overflow-hidden bg-secondary">
+    <Section spacing="md" id="why-choose-us" className="relative overflow-hidden bg-background">
       <Container>
-        <SectionHeading 
+        <SectionHeading
           badge="The NeuroGears Advantage"
           title="Why Choose Us"
           subtitle="Experience the future of automobile maintenance with our unique blend of cutting-edge technology and mechanical expertise."
@@ -44,7 +44,7 @@ export function WhyChooseUsSection() {
             const Icon = reason.icon
             return (
               <div key={index} className="group h-full">
-                <Card variant="glass" className="h-full flex flex-col p-6 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-lg">
+                <Card variant="glass" className="h-full flex flex-col p-6 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-lg bg-[lab(6_0_-1.12)] border-b-[rgb(39,39,42)]">
                   <div className="p-3 bg-primary/10 rounded-xl w-fit mb-5 group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
