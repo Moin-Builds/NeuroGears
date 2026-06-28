@@ -7,7 +7,7 @@ import { SERVICES_DATA } from "@/data/services"
 
 export function ServicesSection() {
   return (
-    <Section spacing="md" id="services" className="relative overflow-hidden">
+    <Section spacing="sm" id="services" className="relative overflow-hidden">
       <Container>
         <SectionHeading 
           badge="Our Expertise"

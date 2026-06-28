@@ -70,10 +70,10 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
 
           <div className="flex items-center gap-3 mt-auto">
             <Link
-              href={`/booking?service=${service.slug}`}
+              href={service.slug === 'ai-diagnosis' ? '/chatbot' : `/booking?service=${service.slug}`}
               className={cn(buttonVariants({ variant: "default" }), "flex-1 shadow-md hover:shadow-lg transition-shadow bg-primary text-primary-foreground hover:bg-primary/90 shadow-primary/20 hover:shadow-primary/40 border-none")}
             >
-              Book Now
+              {service.slug === 'ai-diagnosis' ? 'AI-Diagnosis' : 'Book Now'}
             </Link>
             <Link
               href={`/services/${service.slug}`}

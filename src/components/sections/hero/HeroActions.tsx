@@ -3,7 +3,7 @@
 import * as React from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { ArrowRight, Cpu } from "lucide-react"
+import { ArrowRight, Cpu, AlertTriangle } from "lucide-react"
 import { buttonVariants } from "@/components/ui/Button"
 import { cn } from "@/lib/utils"
 
@@ -23,11 +23,18 @@ export function HeroActions() {
         <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
       </Link>
       <Link 
-        href="/services/ai-diagnosis" 
+        href="/chatbot" 
         className={cn(buttonVariants({ size: "lg", variant: "glass" }), "w-full sm:w-auto text-base group")}
       >
         <Cpu className="w-4 h-4 mr-2 text-primary" />
         Explore AI Diagnosis
+      </Link>
+      <Link 
+        href="/emergency" 
+        className={cn(buttonVariants({ size: "lg", variant: "outline" }), "w-full sm:w-auto text-base group border-red-500/50 text-red-400 hover:bg-red-500/10 hover:text-red-300")}
+      >
+        <AlertTriangle className="w-4 h-4 mr-2 text-red-500" />
+        Emergency Help
       </Link>
     </motion.div>
   )

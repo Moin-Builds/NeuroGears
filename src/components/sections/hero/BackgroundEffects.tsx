@@ -7,11 +7,11 @@ export function BackgroundEffects() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {/* Vehicle Background Image */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-3/4">
+      <div className="absolute inset-y-0 right-0 w-full lg:w-1/2">
         <img 
           src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&q=80&w=2000" 
           alt="Luxury Vehicle Hero" 
-          className="w-full h-full object-cover object-center lg:object-right scale-105"
+          className="w-full h-full object-cover object-center lg:object-right"
         />
         
         {/* Seamless Gradient Mask (Fades left side into charcoal) */}
