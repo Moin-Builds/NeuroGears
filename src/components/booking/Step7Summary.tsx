@@ -13,7 +13,7 @@ interface StepProps {
 
 export function Step7Summary({ data }: StepProps) {
   const service = SERVICES_DATA.find(s => s.slug === data.serviceSlug)
-  const pkg = service?.packages?.find(p => p.name.toLowerCase().replace(" ", "-") === data.packageId)
+  const pkg = service?.packages?.find((p: any) => p.name.toLowerCase().replace(" ", "-") === data.packageId)
   
   const { selectedSubServices, selectedBookingType, selectedAddons, calculateTotal } = useServiceCart()
   const isCustomCart = selectedSubServices.length > 0
