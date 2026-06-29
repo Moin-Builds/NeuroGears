@@ -26,9 +26,9 @@ export function StickyBookingSummary({ service }: { service: DetailedServiceData
           </div>
           
           <div className="flex items-center gap-4 w-full sm:w-auto">
-            <Button variant="glass" className="hidden md:flex">
+            <button className={cn(buttonVariants({ variant: "glass" }), "hidden md:flex")}>
               View Packages
-            </Button>
+            </button>
             <Link 
               href={`/booking?service=${service.slug}`}
               className={cn(buttonVariants({ size: "lg", variant: "default" }), "w-full sm:w-auto shadow-[0_0_20px_rgba(220,38,38,0.4)]")}
