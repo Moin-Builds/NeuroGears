@@ -36,7 +36,7 @@ export function Step2Package({ data, updateData }: StepProps) {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {selectedService.packages.map((pkg) => {
+        {selectedService.packages.map((pkg: any) => {
           const packageId = pkg.name.toLowerCase().replace(" ", "-")
           const isSelected = data.packageId === packageId
 
