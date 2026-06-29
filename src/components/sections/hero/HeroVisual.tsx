@@ -43,7 +43,7 @@ export function HeroVisual() {
             <div className="h-1.5 w-full bg-secondary rounded-full overflow-hidden">
               <motion.div 
                 className="h-full bg-primary" 
-                initial={{ w: "0%" }} 
+                initial={{ width: "0%" }} 
                 animate={{ width: "85%" }} 
                 transition={{ duration: 0.8, delay: 0.2 }} 
               />
