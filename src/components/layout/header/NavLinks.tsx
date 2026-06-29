@@ -8,7 +8,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/#services" },
   { label: "AI Diagnosis", href: "/services/ai-diagnosis" },
-  { label: "Branches", href: "/#branches" },
+  { label: "Contact Us", href: "/#contact" },
 ]
 
 export function NavLinks() {

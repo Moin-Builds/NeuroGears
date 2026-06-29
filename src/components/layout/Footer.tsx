@@ -6,7 +6,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="w-full bg-gradient-to-t from-black via-zinc-950 to-zinc-900 border-t border-white/10 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] pt-16 pb-8">
+    <footer id="contact" className="w-full bg-gradient-to-t from-black via-zinc-950 to-zinc-900 border-t border-white/10 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] pt-16 pb-8">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Section */}
@@ -19,7 +19,7 @@ export function Footer() {
               The modern, AI-powered automobile service platform for booking fast, professional, and reliable vehicle services.
             </p>
           </div>
-          
+
           {/* Services Section */}
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Services</h3>
@@ -31,15 +31,17 @@ export function Footer() {
               <li><Link href="/services/rentals" className="hover:text-primary transition-colors">Vehicle Rentals</Link></li>
             </ul>
           </div>
-          
+
           {/* Branches Section */}
           <div>
             <h3 className="font-semibold mb-4 text-foreground">Branches</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/branches/new-york" className="hover:text-primary transition-colors">New York</Link></li>
-              <li><Link href="/branches/los-angeles" className="hover:text-primary transition-colors">Los Angeles</Link></li>
-              <li><Link href="/branches/chicago" className="hover:text-primary transition-colors">Chicago</Link></li>
-              <li><Link href="/branches/houston" className="hover:text-primary transition-colors">Houston</Link></li>
+              <li><Link href="/branches/lahore" className="hover:text-primary transition-colors">Lahore</Link></li>
+              <li><Link href="/branches/karachi" className="hover:text-primary transition-colors">Karachi</Link></li>
+              <li><Link href="/branches/islamabad" className="hover:text-primary transition-colors">Islamabad</Link></li>
+              <li><Link href="/branches/faisalabad" className="hover:text-primary transition-colors">Faisalabad</Link></li>
+              <li><Link href="/branches/gujranwala" className="hover:text-primary transition-colors">Gujranwala</Link></li>
+              <li><Link href="/branches/sargodha" className="hover:text-primary transition-colors">Sargodha</Link></li>
             </ul>
           </div>
 
@@ -62,7 +64,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-muted-foreground">
           <p>© {currentYear} NeuroGears. All rights reserved.</p>
           <div className="flex items-center gap-6 mt-4 md:mt-0">
