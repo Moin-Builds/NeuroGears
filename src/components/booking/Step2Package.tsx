@@ -78,7 +78,7 @@ export function Step2Package({ data, updateData }: StepProps) {
               </div>
 
               <div className="flex-1 space-y-3">
-                {pkg.features.map((feature, idx) => (
+                {pkg.features.map((feature: string, idx: number) => (
                   <div key={idx} className="flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     <span className="text-sm text-muted-foreground">{feature}</span>
